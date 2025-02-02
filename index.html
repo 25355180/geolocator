@@ -26,7 +26,28 @@ function geocodeLatLng(geocoder, map, infowindow) {
   };
 }
 </script>
+<h2>JavaScript Geolocation</h2>
+<p>Click the button to get your coordinates.</p>
+<button id="geo" onclick="getLocation()">&#127756; Click me!</button>
+<p id="demo"></p>
 
+<script>
+    const x = document.getElementById("demo");
+
+    function getLocation() {
+    try {
+        navigator.geolocation.getCurrentPosition(showPosition);
+    } catch {
+        x.innerHTML = err;
+    }
+    }
+
+    function showPosition(position) {
+    x.innerHTML = "Latitude: " + position.coords.latitude + 
+    "<br>Longitude: " + position.coords.longitude;
+    }
+
+</script>
 <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAjyR_4HIqK_eDcFn_QPviniCgMPdpET4A&callback=myMap"></script>
 
 </body>
