@@ -27,7 +27,23 @@ marker.setMap(map);
 <p>Click the button to get your coordinates.</p>
 <button id="geo" onclick="getLocation()">Your location</button>
 <p id="demo"></p>
+<script>
+  const x = document.getElementById("demo");
 
+  function getLocation() {
+  try {
+      navigator.geolocation.getCurrentPosition(showPosition);
+  } catch {
+      x.innerHTML = err;
+  }
+  }
+
+  function showPosition(position) {
+  x.innerHTML = "Latitude: " + position.coords.latitude + 
+  "<br>Longitude: " + position.coords.longitude;
+  }
+
+</script>
 
 <script src= "https://www.google.com/maps/embed/v1/streetview?key=AIzaSyAjyR_4HIqK_eDcFn_QPviniCgMPdpET4A&location=46.414382,10.013988&heading=210&pitch=10&fov=35"></script>
 
