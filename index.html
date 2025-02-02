@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html>
-  <script src="script.js"></script>
   <title>Find 'em</title>
 <body>
 
@@ -15,7 +14,7 @@ var mapProp= {
   zoom:10,
 };
 var map = new google.maps.Map(document.getElementById("googleMap"),mapProp);
-var marker = new google.maps.marker.AdvancedMarkerElement({position: new google.maps.LatLng(51.508742,-0.120850)});
+var marker = new google.maps.marker({position: new google.maps.LatLng(51.508742,-0.120850)});
 
 marker.setMap(map);
 }
