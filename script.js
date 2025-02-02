@@ -1,42 +1,44 @@
-function initMap() {
-  const map = new google.maps.Map(document.getElementById("map"), {
-    zoom: 8,
-    center: { lat: 40.731, lng: -73.997 },
-  });
-  const geocoder = new google.maps.Geocoder();
-  const infowindow = new google.maps.InfoWindow();
-
-  document.getElementById("submit").addEventListener("click", () => {
-    geocodeLatLng(geocoder, map, infowindow);
-  });
-}
-
-function geocodeLatLng(geocoder, map, infowindow) {
-  const input = document.getElementById("latlng").value;
-  const latlngStr = input.split(",", 2);
-  const latlng = {
-    lat: parseFloat(latlngStr[0]),
-    lng: parseFloat(latlngStr[1]),
+function myMap() {
+  var mapProp= {
+    center:new google.maps.LatLng(51.508742,-0.120850),
+    zoom:5,
   };
+  }
+  
+  function geocodeLatLng(geocoder, map, infowindow) {
+    const input = document.getElementById("latlng").value;
+    const latlngStr = input.split(",", 2);
+    const latlng = {
+      lat: parseFloat(latlngStr[0]),
+      lng: parseFloat(latlngStr[1]),
+    };
+  }
 
-  geocoder
-    .geocode({ location: latlng })
-    .then((response) => {
-      if (response.results[0]) {
-        map.setZoom(11);
+  const x = document.getElementById("demo");
 
-        const marker = new google.maps.Marker({
-          position: latlng,
+    function getLocation() {
+    try {
+        navigator.geolocation.getCurrentPosition(showPosition);
+    } catch {
+        x.innerHTML = err;
+    }
+    }
+
+    function showPosition(position) {
+    x.innerHTML = "Latitude: " + position.coords.latitude + 
+    "<br>Longitude: " + position.coords.longitude;
+    }
+
+    function initMap() {
+      // Create a map object centered at a specific location
+      var map = new google.maps.Map(document.getElementById('map'), {
+          center: { lat: 51.508742, lng: -0.120850 }, // Example coordinates
+          zoom: 10
+      });
+      
+      // Create a marker object
+      var marker = new google.maps.Marker({
+          position: { lat: 51.508742, lng: -0.120850 }, // Same coordinates as the map center
           map: map,
-        });
-
-        infowindow.setContent(response.results[0].formatted_address);
-        infowindow.open(map, marker);
-      } else {
-        window.alert("No results found");
-      }
-    })
-    .catch((e) => window.alert("Geocoder failed due to: " + e));
-}
-
-window.initMap = initMap;
+      });
+  }
