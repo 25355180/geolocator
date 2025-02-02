@@ -1,10 +1,3 @@
-function myMap() {
-  var mapProp= {
-    center:new google.maps.LatLng(51.508742,-0.120850),
-    zoom:5,
-  };
-  }
-  
 function geocodeLatLng(geocoder, map, infowindow) {
   const input = document.getElementById("latlng").value;
   const latlngStr = input.split(",", 2);
