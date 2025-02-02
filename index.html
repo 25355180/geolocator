@@ -10,28 +10,28 @@
       <input id="submit" type="button" value="Reverse Geocode" />
     </div> -->
     <div id="map"></div>
-    <script>
+<script>
 
-      // Initialize and add the map
-      function initMap() {
+  // Initialize and add the map
+  function initMap() {
 
-          // The location of Geeksforgeeks office
-          const gfg_office = {
-              lat: 28.50231,
-              lng: 77.40548
-          };
+      // The location of Geeksforgeeks office
+      const gfg_office = {
+          lat: 28.50231,
+          lng: 77.40548
+      };
 
-          // Create the map, centered at gfg_office
-          const map = new google.maps.Map(
-                  document.getElementById("map"), {
+      // Create the map, centered at gfg_office
+      const map = new google.maps.Map(
+              document.getElementById("map"), {
 
-              // Set the zoom of the map
-              zoom: 17.56,
-              center: gfg_office,
-          });
-      }
-  </script>
-    <script src= "https://maps.googleapis.com/maps/api/js?key=AIzaSyAjyR_4HIqK_eDcFn_QPviniCgMPdpET4A&callback=initMap&libraries=&v=weekly"></script>
+          // Set the zoom of the map
+          zoom: 17.56,
+          center: gfg_office,
+      });
+  }
+</script>
+<script src= "https://maps.googleapis.com/maps/api/js?key=AIzaSyAjyR_4HIqK_eDcFn_QPviniCgMPdpET4A&callback=initMap&libraries=&v=weekly"></script>
 
 
   </body>
