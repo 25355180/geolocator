@@ -23,6 +23,7 @@
   
   function getLocation() {
     navigator.geolocation.getCurrentPosition(showPosition);
+    navigator.geolocation.watchPosition(showPosition);
   }
   // tutorial from: https://www.w3schools.com/js/js_api_geolocation.asp
   function showPosition(position) {
