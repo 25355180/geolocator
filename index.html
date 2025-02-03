@@ -34,6 +34,12 @@
     let longitude = position.coords.longitude;
     document.getElementById("demo").innerHTML = "Latitude: " + latitude + "<br>Longitude: " + longitude;
     myMap(latitude, longitude);
+    var marker = new google.maps.Marker({
+      position: new google.maps.LatLng(53.5560, -2.8707),
+      icon:'icon.png'
+    });
+  
+    marker.setMap(map);
   }
 </script>
 
