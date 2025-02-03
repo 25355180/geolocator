@@ -22,11 +22,7 @@
   }
   
   function getLocation() {
-    try {
-      navigator.geolocation.getCurrentPosition(showPosition);
-    } catch (error) {
-      document.getElementById("demo").innerHTML = "Oops! Something went wrong";
-    }
+    navigator.geolocation.getCurrentPosition(showPosition);
   }
   // tutorial from: https://www.w3schools.com/js/js_api_geolocation.asp
   function showPosition(position) {
