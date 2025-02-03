@@ -12,13 +12,13 @@
       center:new google.maps.LatLng(latitude, longitude),
       zoom:10,
     };
-    var map = new google.maps.Map(document.getElementById("googleMap"),mapProp);
-    var marker = new google.maps.Marker({
-      position: new google.maps.LatLng(latitude, longitude),
-      icon:'icon.png'
-    });
+    // var map = new google.maps.Map(document.getElementById("googleMap"),mapProp);
+    // var marker = new google.maps.Marker({
+    //   position: new google.maps.LatLng(latitude, longitude),
+    //   icon:'icon.png'
+    // });
   
-    marker.setMap(map);
+    // marker.setMap(map);
   }
   
   function getLocation() {
@@ -35,7 +35,7 @@
     document.getElementById("demo").innerHTML = "Latitude: " + latitude + "<br>Longitude: " + longitude;
     myMap(latitude, longitude);
   }
-  </script>
+</script>
 
 
 <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAjyR_4HIqK_eDcFn_QPviniCgMPdpET4A&callback=myMap"></script>
