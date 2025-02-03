@@ -33,18 +33,16 @@
   let latitude = position.coords.latitude;
   let longitude = position.coords.longitude;
   document.getElementById("demo").innerHTML = "Latitude: " + latitude + "<br>Longitude: " + longitude;
-  myMap(latitude, longitude);
-  var mapOptions = {
+  let mapOptions = {
     zoom: 10,
     center: new google.maps.LatLng(latitude, longitude),
   };
-  var map = new google.maps.Map(document.getElementById("map"), mapOptions);
-  var marker = new google.maps.Marker({
+  let map = new google.maps.Map(document.getElementById("map"), mapOptions);
+  let marker = new google.maps.Marker({
     position: new google.maps.LatLng(latitude, longitude),
     icon: 'icon.png',
     map: map
   });
-
   marker.setMap(map);
 }
 </script>
