@@ -37,7 +37,7 @@
     zoom: 10,
     center: new google.maps.LatLng(latitude, longitude),
   };
-  let map = new google.maps.Map(document.getElementById("map"), mapOptions);
+  let map = new google.maps.Map(document.getElementById("googleMap"), mapOptions);
   let marker = new google.maps.Marker({
     position: new google.maps.LatLng(latitude, longitude),
     icon: 'icon.png',
