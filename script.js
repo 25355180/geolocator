@@ -15,17 +15,17 @@ function convertToJson() {
 function getData() {
   const xmlhttp = new XMLHttpRequest();
   xmlhttp.onload = function() {
-    console.log(this.responseText); // Log the raw response text
+    console.log(this.responseText); 
     const myObj = JSON.parse(this.responseText);
     console.log(myObj); // Log the parsed object
     document.getElementById("Output").innerHTML = myObj.name;
-    showPosition(myObj); 
+    showPositions(myObj); 
   };
   xmlhttp.open("GET", "json_locations.txt", true);
   xmlhttp.send();
 }
 
-function showPosition(myObj) {
+function showPositions(myObj) {
   console.log(myObj); // Log the object received in showPosition function
   if (myObj && myObj.latitude && myObj.longitude) {  // Add a check for the properties
     let latitude = myObj.latitude;
