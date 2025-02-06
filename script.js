@@ -1,7 +1,7 @@
 function convertToJson() {
   let form = document.getElementById("yourlocation");
   let formData = {};
-  for (let i = 0; i < form.elements.length; i++) {
+  for (let i = 0; i < 3; i++) {
       let element = form.elements[i];
       if (element.type !== "submit") {
           formData[element.name] = element.value;
@@ -9,5 +9,5 @@ function convertToJson() {
   }
   let jsonData = JSON.stringify(formData);
   let jsonOutput = document.getElementById("jsonOutput");
-  jsonOutput.innerHTML = "<pre>" + jsonData + jsonData,"</pre>";
+  jsonOutput.innerHTML = "<pre>" + jsonData +"</pre>";
 }
