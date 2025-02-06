@@ -39,7 +39,6 @@ function showPosition(myObj) {
     map: map
   });
   marker.setMap(map);
-
 }
 
 function sendData(){
