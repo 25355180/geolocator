@@ -25,7 +25,7 @@ function getData() {
   xmlhttp.send();
 }
 
-function showPositions(myObj) {
+function showPosition(myObj) {
   console.log(myObj); // Log the object received in showPosition function
   if (myObj && myObj.latitude && myObj.longitude) {  // Add a check for the properties
     let latitude = myObj.latitude;
