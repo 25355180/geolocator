@@ -15,9 +15,9 @@ function convertToJson() {
 function getData() {
   const xmlhttp = new XMLHttpRequest();
   xmlhttp.onload = function() {
-    console.log(this.responseText);
+    console.log(this.responseText); // Log the raw response text
     const myObj = JSON.parse(this.responseText);
-    console.log(myObj); 
+    console.log(myObj); // Log the parsed object
     document.getElementById("Output").innerHTML = myObj.name;
     showPosition(myObj); 
   };
@@ -25,9 +25,9 @@ function getData() {
   xmlhttp.send();
 }
 
-function showPosition(myObj) { 
-  console.log(myObj); 
-  if (myObj && myObj.latitude && myObj.longitude) {  
+function showPositions(myObj) {
+  console.log(myObj); // Log the object received in showPosition function
+  if (myObj && myObj.latitude && myObj.longitude) {  // Add a check for the properties
     let latitude = myObj.latitude;
     let longitude = myObj.longitude;
     document.getElementById("demo").innerHTML = "Latitude: " + latitude + "<br>Longitude: " + longitude;
@@ -48,7 +48,6 @@ function showPosition(myObj) {
     console.error('Latitude and/or longitude are not defined in myObj');
   }
 }
-
 
 
 function sendData(){
