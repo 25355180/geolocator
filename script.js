@@ -11,7 +11,7 @@ function convertToJson() {
   let jsonOutput = document.getElementById("jsonOutput");
   jsonOutput.innerHTML = "<pre>" + jsonData +"</pre>";
 };
-function getData{
+function getData(){
   const xmlhttp = new XMLHttpRequest();
   xmlhttp.onload = function() {
     const myObj = JSON.parse(this.responseText);
@@ -21,7 +21,7 @@ function getData{
   xmlhttp.send();
 
 };
-function sendData{
+function sendData(){
   const xmlhttp = new XMLHttpRequest();
   xmlhttp.onload = function() {
     const myArr = JSON.parse(this.responseText);
