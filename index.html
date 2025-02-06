@@ -28,7 +28,7 @@
   let longitude = position.coords.longitude;
   document.getElementById("demo").innerHTML = "Latitude: " + latitude + "<br>Longitude: " + longitude;
   let mapOptions = {
-    zoom: 10,
+    zoom: 15,
     center: new google.maps.LatLng(latitude, longitude),
   };
   let map = new google.maps.Map(document.getElementById("googleMap"), mapOptions);
