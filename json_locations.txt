@@ -1,5 +1,5 @@
 {
     "name":"Ali",
-    "latitude":41.4246,
+    "latitude":40.7246,
     "longitude":-74.00597
 }
