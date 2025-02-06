@@ -11,3 +11,20 @@ function convertToJson() {
   let jsonOutput = document.getElementById("jsonOutput");
   jsonOutput.innerHTML = "<pre>" + jsonData +"</pre>";
 }
+const xmlhttp = new XMLHttpRequest();
+xmlhttp.onload = function() {
+  const myObj = JSON.parse(this.responseText);
+  document.getElementById("Output").innerHTML = myObj.name;
+};
+xmlhttp.open("GET", "json_locations.txt");
+xmlhttp.send();
+
+
+
+const xmlhttp = new XMLHttpRequest();
+xmlhttp.onload = function() {
+  const myArr = JSON.parse(this.responseText);
+  document.getElementById("Output").innerHTML = myArr[0];
+}
+xmlhttp.open("GET", "json_locations.txt", true);
+xmlhttp.send();
