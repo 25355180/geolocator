@@ -16,7 +16,7 @@ function getData() {
   xmlhttp.onload = function() {
     const myObj = JSON.parse(this.responseText);
     document.getElementById("Output").innerHTML = myObj.name;
-    showPosition(myObj); // Calling showPosition here
+    showPosition(myObj); 
   };
   xmlhttp.open("GET", "json_locations.txt");
   xmlhttp.send();
