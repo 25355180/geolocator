@@ -26,7 +26,8 @@ function getData() {
 }
 
 function showPosition(myObj) {
-  if (myObj && myObj.latitude && myObj.longitude) {  
+  console.log(myObj); // Log the object received in showPosition function
+  if (myObj && myObj.latitude && myObj.longitude) {  // Add a check for the properties
     let latitude = myObj.latitude;
     let longitude = myObj.longitude;
     document.getElementById("demo").innerHTML = "Latitude: " + latitude + "<br>Longitude: " + longitude;
