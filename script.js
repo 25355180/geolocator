@@ -18,7 +18,7 @@ function getData() {
     document.getElementById("Output").innerHTML = myObj.name;
     showPosition(myObj); 
   };
-  xmlhttp.open("GET", "json_locations.txt");
+  xmlhttp.open("GET", "json_locations.txt", true);
   xmlhttp.send();
 }
 
@@ -38,9 +38,10 @@ function showPosition(myObj) {
     icon: 'friend_icon.png',
     map: map
   });
-  marker.setMap
+  marker.setMap(map);
 
-};
+}
+
 function sendData(){
   const xmlhttp = new XMLHttpRequest();
   xmlhttp.onload = function() {
