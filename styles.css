@@ -2,6 +2,9 @@
     height: 400px;
     width: 100%;   
   }
-  p {
+p {
+    font-family: 'Comic Sans MS', 'courier';
+}
+h1 {
     font-family: 'Comic Sans MS', 'courier';
 }
