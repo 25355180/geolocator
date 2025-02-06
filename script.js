@@ -1,19 +1,13 @@
-btn.addEventListener("click", function(){
-  var ourRequest = new XMLHttpRequest();
-  ourRequest.open('GET', 'location.JSON');
-  ourRequest.onload = function(){
-    //console.log(ourRequest.responseText);
-    var ourData = JSON.parse(ourRequest.responseText);
-    //console.log(ourData[0]);
-    renderHTML(ourData);
-  };
-  ourRequest.send();
-});
-
-function renderHTML(data){
-  var htmlString = "";
-
-  for(i = 0; i < data.length; i++){
-    htmlString += "<p>" + data[i].Name + " is " + data[i]; //".</p>";
+function convertToJson() {
+  let form = document.getElementById("yourlocation");
+  let formData = {};
+  for (let i = 0; i < form.elements.length; i++) {
+      let element = form.elements[i];
+      if (element.type !== "submit") {
+          formData[element.name] = element.value;
+      }
   }
-  };
+  let jsonData = JSON.stringify(formData);
+  let jsonOutput = document.getElementById("jsonOutput");
+  jsonOutput.innerHTML = "<pre>" + jsonData + "</pre>";
+}
