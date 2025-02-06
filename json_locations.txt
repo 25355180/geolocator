@@ -1,9 +1,6 @@
 {
-    "name":"John",
-    "age":31,
-    "pets":[
-        { "animal":"dog", "name":"Fido" },
-        { "animal":"cat", "name":"Felix" },
-        { "animal":"hamster", "name":"Lightning" }
-    ]
+    "name":"Test",
+    "code":"1234",
+    "latitude":"53.5560,"
+    "longitude":"-2.8707",
 }
