@@ -9,5 +9,5 @@ function convertToJson() {
   }
   let jsonData = JSON.stringify(formData);
   let jsonOutput = document.getElementById("jsonOutput");
-  jsonOutput.innerHTML = "<pre>" + jsonData + "</pre>";
+  jsonOutput.innerHTML = "<pre>" + jsonData + jsonData,"</pre>";
 }
