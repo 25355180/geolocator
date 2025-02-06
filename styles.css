@@ -11,6 +11,7 @@ h1 {
 }
 h2 {
     font-family: 'Comic Sans MS', 'courier';
+    font-style: italic;
 }
 body{
     background-color: rgb(144, 236, 219)
