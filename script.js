@@ -19,6 +19,22 @@ function getData(){
   };
   xmlhttp.open("GET", "json_locations.txt");
   xmlhttp.send();
+  function showPosition(myObj) {
+    let latitude = myObj.latitude;
+    let longitude = myObj.longitude;
+    document.getElementById("demo").innerHTML = "Latitude: " + latitude + "<br>Longitude: " + longitude;
+    let mapOptions = {
+      zoom: 15,
+      center: new google.maps.LatLng(latitude, longitude),
+    };
+    let map = new google.maps.Map(document.getElementById("googleMap"), mapOptions);
+    let marker = new google.maps.Marker({
+      position: new google.maps.LatLng(latitude, longitude),
+      icon: 'friend_icon.png',
+      map: map
+    });
+    marker.setMap(map);
+  }
 
 };
 function sendData(){
