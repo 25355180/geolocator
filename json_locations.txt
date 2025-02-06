@@ -1,14 +1,9 @@
-[
-    {
-        "name": "Alison",
-        "location":"46.414382,10.013988"
-    },
-    {
-        "name": "Test",
-        "location":"76.414382,10.013988"
-    },
-    {
-        "name": "Ali",
-        "location":"96.414382,10.013988"
-    }
-]
+{
+    "name":"John",
+    "age":31,
+    "pets":[
+        { "animal":"dog", "name":"Fido" },
+        { "animal":"cat", "name":"Felix" },
+        { "animal":"hamster", "name":"Lightning" }
+    ]
+}
