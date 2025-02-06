@@ -44,6 +44,8 @@ function showPosition(myObj) {
       map: map
     });
     marker.setMap(map);
+  } else {
+    console.error('Latitude and/or longitude are not defined in myObj');
   }
 }
 
