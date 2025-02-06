@@ -17,7 +17,7 @@ function getData() {
   xmlhttp.onload = function() {
     console.log(this.responseText); 
     const myObj = JSON.parse(this.responseText);
-    console.log(myObj); // Log the parsed object
+
     document.getElementById("Output").innerHTML = myObj.name;
     showPositions(myObj); 
   };
@@ -26,8 +26,7 @@ function getData() {
 }
 
 function showPositions(myObj) {
-  console.log(myObj); // Log the object received in showPosition function
-  if (myObj && myObj.latitude && myObj.longitude) {  // Add a check for the properties
+  if (myObj && myObj.latitude && myObj.longitude) {  
     let latitude = myObj.latitude;
     let longitude = myObj.longitude;
     document.getElementById("demo").innerHTML = "Latitude: " + latitude + "<br>Longitude: " + longitude;
@@ -44,8 +43,6 @@ function showPositions(myObj) {
       map: map
     });
     marker.setMap(map);
-  } else {
-    console.error('Latitude and/or longitude are not defined in myObj');
   }
 }
 
