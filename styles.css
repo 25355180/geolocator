@@ -14,5 +14,6 @@ h2 {
     font-style: italic;
 }
 body{
-    background-color: rgb(144, 236, 219)
+    background-color: rgb(144, 236, 219);
+    font-family: "Playfair Display", serif;
 }
