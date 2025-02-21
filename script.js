@@ -61,8 +61,8 @@ document.getElementById('dataForm').addEventListener('submit', function(event) {
   event.preventDefault(); 
 
   const name = document.getElementById('name').value;
-  const age = document.getElementById('latitude').value;
-  const age = document.getElementById('longitude').value;
+  const latitude = document.getElementById('latitude').value;
+  const longitude = document.getElementById('longitude').value;
   const data = {
       name: name,
       latitude: latitude,
