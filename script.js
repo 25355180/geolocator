@@ -56,3 +56,20 @@ function sendData(){
   xmlhttp.open("GET", "json_demo_array.txt", true);
   xmlhttp.send();
 };
+
+document.getElementById('dataForm').addEventListener('submit', function(event) {
+  event.preventDefault(); 
+
+  const name = document.getElementById('name').value;
+  const age = document.getElementById('latitude').value;
+  const age = document.getElementById('longitude').value;
+  const data = {
+      name: name,
+      latitude: latitude,
+      longitude: longitude
+  };
+
+  const jsonString = JSON.stringify(data);
+
+  console.log(jsonString);
+});
