@@ -3,15 +3,15 @@
     width: 100%;   
   }
 p {
-
+font-size: 20px;
 }
 h1 {
-
+    font-size: 40px;
     font-weight: bold;
 }
 h2 {
+    font-size: 30px;
 
-    font-style: italic;
 }
 body{
     background-color: rgb(144, 236, 219);
