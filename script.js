@@ -59,25 +59,10 @@ document.getElementById('dataForm').addEventListener('submit', function(event) {
       longitude: longitude
   };
 
-  const jsonString = JSON.stringify(data, null, 2);
+  const jsonString = JSON.stringify(data);
+  localStorage.setItem('formData', jsonString);
 
-  try {
-      const handle = await window.showSaveFilePicker({
-          suggestedName: 'formData.json',
-          types: [{
-              description: 'JSON Files',
-              accept: {'application/json': ['.json']}
-          }]
-      });
 
-      const writable = await handle.createWritable();
-      await writable.write(jsonString);
-      await writable.close();
-
-      document.getElementById("demo").innerHTML = `Data saved to formData.json`;
-  } catch (error) {
-      console.error('Error saving file:', error);
-      document.getElementById("demo").innerHTML = `Error saving file: ${error.message}`;
-  }
+  const storedData = JSON.parse(localStorage.getItem('formData'));
+  document.getElementById("demo").innerHTML = `Name: ${storedData.name}, Latitude: ${storedData.latitude}, Longitude: ${storedData.longitude}`;
 });
-
