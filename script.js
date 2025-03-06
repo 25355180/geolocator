@@ -47,16 +47,6 @@ function showPositions(myObj) {
 }
 
 
-function sendData(){
-  const xmlhttp = new XMLHttpRequest();
-  xmlhttp.onload = function() {
-    const myArr = JSON.parse(this.responseText);
-    document.getElementById("demo").innerHTML = myArr[0];
-  }
-  xmlhttp.open("GET", "json_demo_array.txt", true);
-  xmlhttp.send();
-};
-
 document.getElementById('dataForm').addEventListener('submit', function(event) {
   event.preventDefault(); 
 
@@ -70,20 +60,9 @@ document.getElementById('dataForm').addEventListener('submit', function(event) {
   };
 
   const jsonString = JSON.stringify(data);
+  localStorage.setItem('formData', jsonString);
 
-  console.log(jsonString);
-  fetch('https://example.com/save-data', {
-    method: 'POST',
-    headers: {
-        'Content-Type': 'application/json'
-    },
-    body: jsonString
-})
-.then(response => response.json())
-.then(data => {
-    console.log('Success:', data);
-})
-.catch((error) => {
-    console.error('Error:', error);
-});
+
+  const storedData = JSON.parse(localStorage.getItem('formData'));
+  document.getElementById("demo").innerHTML = `Name: ${storedData.name}, Latitude: ${storedData.latitude}, Longitude: ${storedData.longitude}`;
 });
