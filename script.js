@@ -12,7 +12,7 @@ function convertToJson() {
   jsonOutput.innerHTML = "<pre>" + jsonData +"</pre>";
 };
 
-document.addEventListener("DOMContentLoaded", function getData () {
+function getData() {
   const xmlhttp = new XMLHttpRequest();
   xmlhttp.onload = function () {
     console.log(this.responseText); 
@@ -27,12 +27,18 @@ document.addEventListener("DOMContentLoaded", function getData () {
         index++; 
       }
     }
+
+    // Adding event listener for the "Next" button
     document.getElementById("NextButton").addEventListener("click", displayNext);
   };
 
   xmlhttp.open("GET", "json_locations.txt", true);
   xmlhttp.send();
-});
+}
+
+// Ensure the DOM is fully loaded before attaching the event listener
+document.addEventListener("DOMContentLoaded", getData);
+
 
 
 
