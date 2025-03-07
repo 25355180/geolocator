@@ -23,7 +23,7 @@ function getData() {
       output += location.name; 
       showPositions(location); 
     });
-
+  // tutorial from: https://www.w3schools.com/js/js_api_geolocation.asp
     document.getElementById("Output").innerHTML = output; 
     let index = 0; 
     function displayNext() {
