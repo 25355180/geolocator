@@ -34,7 +34,7 @@ function getData() {
         index++; 
       }
     }
-    document.getElementById("NextButton").addEventListener("click", displayNext);
+    document.getElementById("Next").addEventListener("click", displayNext);
   };
 
   xmlhttp.open("GET", "json_locations.txt", true);
