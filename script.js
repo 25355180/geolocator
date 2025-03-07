@@ -66,3 +66,4 @@ document.getElementById('dataForm').addEventListener('submit', function(event) {
   const storedData = JSON.parse(localStorage.getItem('formData'));
   document.getElementById("demo").innerHTML = `Name: ${storedData.name}, Latitude: ${storedData.latitude}, Longitude: ${storedData.longitude}`;
 });
+ 
