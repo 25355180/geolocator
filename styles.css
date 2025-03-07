@@ -27,7 +27,7 @@ button{
     margin-left: 50px;
     margin-top: 20px;
     position: relative;
-    animation: idle 5s linear 2s infinite alternate;
+    animation: idle 5s linear 1s infinite;
 }
 @keyframes idle {
     0%, 100% {
