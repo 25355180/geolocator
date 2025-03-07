@@ -12,7 +12,7 @@ function convertToJson() {
   jsonOutput.innerHTML = "<pre>" + jsonData +"</pre>";
 };
 
-document.addEventListener("DOMContentLoaded", function () {
+document.addEventListener("DOMContentLoaded", function getData () {
   const xmlhttp = new XMLHttpRequest();
   xmlhttp.onload = function () {
     console.log(this.responseText); 
