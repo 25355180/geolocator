@@ -14,16 +14,23 @@ function convertToJson() {
 
 function getData() {
   const xmlhttp = new XMLHttpRequest();
-  xmlhttp.onload = function() {
+  xmlhttp.onload = function () {
     console.log(this.responseText); 
-    const myObj = JSON.parse(this.responseText);
+    const locations = JSON.parse(this.responseText);
 
-    document.getElementById("Output").innerHTML = myObj.name;
-    showPositions(myObj); 
+    let output = ""; 
+    locations.forEach(location => {
+      output += location.name; 
+      showPositions(location); 
+    });
+
+    document.getElementById("Output").innerHTML = output; // Display all names
   };
+
   xmlhttp.open("GET", "json_locations.txt", true);
   xmlhttp.send();
 }
+
 
 function showPositions(myObj) {
   if (myObj && myObj.latitude && myObj.longitude) {  
