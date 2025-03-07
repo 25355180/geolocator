@@ -22,7 +22,7 @@ button{
     background-color: black;
     color: lightgoldenrodyellow;
 }
-#magnify{
+.magnify{
     animation: idle 1s linear infinite;
     animation-duration: 2.5s;
 }
