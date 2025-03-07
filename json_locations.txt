@@ -3,3 +3,8 @@
     "latitude":40.7246,
     "longitude":-74.00597
 }
+{
+    "name":"Zelda",
+    "latitude":50.7246,
+    "longitude":-74.00597
+}
