@@ -29,7 +29,7 @@ function getData() {
     function displayNext() {
       if (index < locations.length) {
         const location = locations[index];
-        document.getElementById("Output").innerHTML = location.name; 
+        document.getElementById("Output").innerHTML = location.name + <br></br>; 
         showPositions(location); 
         index++; 
       }
