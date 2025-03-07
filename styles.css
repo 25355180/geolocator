@@ -23,8 +23,7 @@ button{
     color: lightgoldenrodyellow;
 }
 #magnify{
-    animation: idle 1s linear infinite;
-    animation-duration: 2.5s;
+    animation: idle 5s linear 2s infinite alternate;
 }
 @keyframes idle {
     0%, 100% {
