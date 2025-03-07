@@ -12,7 +12,7 @@ function convertToJson() {
   jsonOutput.innerHTML = "<pre>" + jsonData +"</pre>";
 };
 
-function getData() {
+document.addEventListener("DOMContentLoaded", function () {
   const xmlhttp = new XMLHttpRequest();
   xmlhttp.onload = function () {
     console.log(this.responseText); 
@@ -32,7 +32,7 @@ function getData() {
 
   xmlhttp.open("GET", "json_locations.txt", true);
   xmlhttp.send();
-}
+});
 
 
 
