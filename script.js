@@ -18,18 +18,22 @@ function getData() {
     console.log(this.responseText); 
     const locations = JSON.parse(this.responseText);
 
-    let output = ""; 
-    locations.forEach(location => {
-      output += location.name; 
-      showPositions(location); 
-    });
-
-    document.getElementById("Output").innerHTML = output; // Display all names
+    let index = 0; 
+    function displayNext() {
+      if (index < locations.length) {
+        const location = locations[index];
+        document.getElementById("Output").innerHTML = location.name; 
+        showPositions(location); 
+        index++; 
+      }
+    }
+    document.getElementById("NextButton").addEventListener("click", displayNext);
   };
 
   xmlhttp.open("GET", "json_locations.txt", true);
   xmlhttp.send();
 }
+
 
 
 function showPositions(myObj) {
