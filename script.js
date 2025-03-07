@@ -27,8 +27,6 @@ function getData() {
         index++; 
       }
     }
-
-    // Adding event listener for the "Next" button
     document.getElementById("NextButton").addEventListener("click", displayNext);
   };
 
@@ -36,7 +34,6 @@ function getData() {
   xmlhttp.send();
 }
 
-// Ensure the DOM is fully loaded before attaching the event listener
 document.addEventListener("DOMContentLoaded", getData);
 
 
