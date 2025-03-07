@@ -30,10 +30,13 @@ button{
     animation: idle 1s linear infinite;
 }
 @keyframes idle {
-    0%, 100% {
+    0% {
         left: 100px;
       }
       50% {
         right: 200px;
+      }
+      100%{
+        left:100px;
       }
 }
