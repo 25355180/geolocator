@@ -30,6 +30,6 @@ button{
         left: 100px;
       }
       50% {
-        right: 100px;
+        right: 200px;
       }
-  }
+}
