@@ -18,6 +18,13 @@ function getData() {
     console.log(this.responseText); 
     const locations = JSON.parse(this.responseText);
 
+    let output = ""; 
+    locations.forEach(location => {
+      output += location.name; 
+      showPositions(location); 
+    });
+
+    document.getElementById("Output").innerHTML = output; 
     let index = 0; 
     function displayNext() {
       if (index < locations.length) {
@@ -33,9 +40,6 @@ function getData() {
   xmlhttp.open("GET", "json_locations.txt", true);
   xmlhttp.send();
 }
-
-document.addEventListener("DOMContentLoaded", getData);
-
 
 
 
