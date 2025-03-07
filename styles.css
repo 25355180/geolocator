@@ -14,6 +14,11 @@ h2 {
 
 }
 body{
-    background-color: rgb(144, 236, 219);
+    background-color: lightgreen;
     font-family: "Poetsen One", sans-serif;
+}
+button{
+    font-family: "Poetsen One", sans-serif;
+    background-color: black;
+    color: lightgoldenrodyellow;
 }
