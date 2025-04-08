@@ -54,3 +54,6 @@ footer{
   color: antiquewhite;
   background-color: rgb(8, 47, 17);
 }
+form{
+  padding: 20px;
+}
