@@ -6,13 +6,13 @@ p {
 font-size: 20px;
 }
 h1 {
-    font-size: 45px;
+    font-size: 75px;
     font-weight: bold;
     font-style: italic;
 }
 h2 {
-    font-size: 30px;
-    padding-left: 70px;
+    font-size: 40px;
+    padding-left: 100px;
     align-self: center;
 }
 .header{
@@ -46,5 +46,5 @@ img{
   margin-top: 20px;
   position: relative;
   height: auto;
-  width: 5%;
+  width: 6%;
 }
