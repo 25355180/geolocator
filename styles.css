@@ -17,7 +17,7 @@ h2 {
   height: auto;
   display: flex;
   flex-direction: row;
-  border-color: brown;
+  border: 2px solid brown;
   border-radius: 3px;
   align-items: center;
 }
@@ -30,6 +30,7 @@ button{
     font-family: "Poetsen One", sans-serif;
     background-color: black;
     color: lightgoldenrodyellow;
+    border-radius: 10%;
 }
 img{
     display: flex;
