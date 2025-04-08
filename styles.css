@@ -11,7 +11,10 @@ h1 {
 }
 h2 {
     font-size: 30px;
-
+}
+.header{
+  width: 100%;
+  height: auto;
 }
 body{
     background-color: rgb(175, 244, 175);
