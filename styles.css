@@ -13,6 +13,7 @@ h1 {
 h2 {
     font-size: 30px;
     padding-left: 30px;
+    align-self: center;
 }
 .header{
   width: 100%;
