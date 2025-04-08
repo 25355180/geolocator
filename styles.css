@@ -18,7 +18,6 @@ h2 {
   display: flex;
   flex-direction: row;
   border: 2px solid brown;
-  border-radius: 3px;
   align-items: center;
 }
 body{
@@ -38,5 +37,5 @@ img{
     margin-top: 20px;
     position: relative;
     height: auto;
-    width: 20%;
+    width: 5%;
 }
