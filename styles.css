@@ -14,9 +14,9 @@ h2 {
 
 }
 body{
-  background-image: url('findem.png');
-  background-repeat: repeat; 
+    background-color: rgb(175, 244, 175);
     font-family: "Poetsen One", sans-serif;
+    margin: 0;
 }
 button{
     font-family: "Poetsen One", sans-serif;
