@@ -6,14 +6,14 @@ p {
 font-size: 20px;
 }
 h1 {
-    font-size: 75px;
-    font-weight: bold;
-    font-style: italic;
+  font-size: 75px;
+  font-weight: bold;
+  font-style: italic;
 }
 h2 {
-    font-size: 40px;
-    padding-left: 100px;
-    align-self: center;
+  font-size: 40px;
+  padding-left: 100px;
+  float: right;
 }
 .header{
   width: 100%;
