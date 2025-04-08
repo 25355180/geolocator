@@ -36,16 +36,7 @@ img{
     margin-left: 50px;
     margin-top: 20px;
     position: relative;
-    animation: idle 1s linear infinite;
-}
-@keyframes idle {
-    0% {
-        left: 100px;
-      }
-      50% {
-        right: 200px;
-      }
-      100%{
-        left:100px;
-      }
+    width: 110%;
+    height: auto;
+
 }
