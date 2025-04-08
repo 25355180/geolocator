@@ -15,7 +15,8 @@ h2 {
 .header{
   width: 100%;
   height: auto;
-  display: inline;
+  display: flex;
+  flex-direction: row;
 }
 body{
     background-color: rgb(175, 244, 175);
