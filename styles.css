@@ -24,7 +24,7 @@ h2 {
   align-items: center;
   color: antiquewhite;
   background-color: rgb(8, 47, 17);
-  justify-content: space-between;
+  justify-content: space-around;
 }
 body{
   background-color: rgb(175, 244, 175);
@@ -47,7 +47,7 @@ img{
   margin-top: 20px;
   position: relative;
   height: auto;
-  width: 6%;
+  width: 10%;
 }
 footer{
   border-bottom: 4px solid antiquewhite;
