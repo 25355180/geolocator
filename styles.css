@@ -15,6 +15,7 @@ h2 {
 .header{
   width: 100%;
   height: auto;
+  display: inline;
 }
 body{
     background-color: rgb(175, 244, 175);
@@ -26,7 +27,7 @@ button{
     background-color: black;
     color: lightgoldenrodyellow;
 }
-#magnify{
+img{
     display: flex;
     margin-left: 50px;
     margin-top: 20px;
