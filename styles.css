@@ -32,6 +32,8 @@ button{
     background-color: black;
     color: lightgoldenrodyellow;
     border-radius: 10%;
+    height: 10%;
+    width: auto;
 }
 img{
     display: flex;
