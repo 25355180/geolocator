@@ -48,3 +48,9 @@ img{
   height: auto;
   width: 6%;
 }
+footer{
+  border-bottom: 4px solid antiquewhite;
+  align-items: center;
+  color: antiquewhite;
+  background-color: rgb(8, 47, 17);
+}

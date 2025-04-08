@@ -17,72 +17,73 @@
   </div>
 
 
-<p>Welcome to Find 'em! The website where you can find your friends!
-Send your location to the server where your friends can find you or see their last uploaded location!
-Never lose your friends again with Find 'em!</p>
-<div id="googleMap" style="width:100%;height:400px;"></div>
-<script>
-  function myMap(latitude, longitude) {
-    var mapProp= {
-      center:new google.maps.LatLng(53.5560, -2.8707),
-      zoom:10,
-      mapTypeId: google.maps.MapTypeId.SATELLITE
+  <p>Welcome to Find 'em! The website where you can find your friends!
+  Send your location to the server where your friends can find you or see their last uploaded location!
+  Never lose your friends again with Find 'em!</p>
+  <div id="googleMap" style="width:100%;height:400px;"></div>
+  <script>
+    function myMap(latitude, longitude) {
+      var mapProp= {
+        center:new google.maps.LatLng(53.5560, -2.8707),
+        zoom:10,
+        mapTypeId: google.maps.MapTypeId.SATELLITE
+      };
+      var map = new google.maps.Map(document.getElementById("googleMap"),mapProp);
+    }
+    
+    function getLocation() {
+      navigator.geolocation.getCurrentPosition(showPosition);
+      navigator.geolocation.watchPosition(showPosition);
+    }
+    // tutorial from: https://www.w3schools.com/js/js_api_geolocation.asp
+    function showPosition(position) {
+    let latitude = position.coords.latitude;
+    let longitude = position.coords.longitude;
+    document.getElementById("demo").innerHTML = "Latitude: " + latitude + "<br>Longitude: " + longitude;
+    let mapOptions = {
+      zoom: 15,
+      center: new google.maps.LatLng(latitude, longitude),
     };
-    var map = new google.maps.Map(document.getElementById("googleMap"),mapProp);
+    let map = new google.maps.Map(document.getElementById("googleMap"), mapOptions);
+    let marker = new google.maps.Marker({
+      position: new google.maps.LatLng(latitude, longitude),
+      icon: 'icon.png',
+      map: map
+    });
+    marker.setMap(map);
   }
-  
-  function getLocation() {
-    navigator.geolocation.getCurrentPosition(showPosition);
-    navigator.geolocation.watchPosition(showPosition);
-  }
-  // tutorial from: https://www.w3schools.com/js/js_api_geolocation.asp
-  function showPosition(position) {
-  let latitude = position.coords.latitude;
-  let longitude = position.coords.longitude;
-  document.getElementById("demo").innerHTML = "Latitude: " + latitude + "<br>Longitude: " + longitude;
-  let mapOptions = {
-    zoom: 15,
-    center: new google.maps.LatLng(latitude, longitude),
-  };
-  let map = new google.maps.Map(document.getElementById("googleMap"), mapOptions);
-  let marker = new google.maps.Marker({
-    position: new google.maps.LatLng(latitude, longitude),
-    icon: 'icon.png',
-    map: map
-  });
-  marker.setMap(map);
-}
-</script>
+  </script>
 
 
-<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAjyR_4HIqK_eDcFn_QPviniCgMPdpET4A&callback=myMap"></script>
+  <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAjyR_4HIqK_eDcFn_QPviniCgMPdpET4A&callback=myMap"></script>
 
-<p>Click the button to get your coordinates.</p>
-<button id="geo" onclick="getLocation()">Your location</button>
-<p id="demo"></p>
+  <p>Click the button to get your coordinates.</p>
+  <button id="geo" onclick="getLocation()">Your location</button>
+  <p id="demo"></p>
 
-<p>Here you can check your friends locations. First check who's online then hit next to see where everyone is.</p>
-<p>If your friend doesn't appear they have hidden their location.</p>
-<div id="jsonOutput"></div>
-<button type="button" 
-onclick="getData()">
-  Find friend
-</button>
-<button id="Next">Next</button>
-<div id="Output"></div>
-<div id="demo"></div>
-<form id="dataForm">
-  <label for="name">Name:</label>
-  <input type="text" id="name" name="name"><br><br>
-  <label for="latitude">Latitude:</label>
-  <input type="text" id="latitude" name="latitude"><br><br>
-  <label for="longitude">Longitude:</label>
-  <input type="text" id="longitude" name="longitude"><br><br>
-  <button type="submit">Save Data</button>
-</form>
+  <p>Here you can check your friends locations. First check who's online then hit next to see where everyone is.</p>
+  <p>If your friend doesn't appear they have hidden their location.</p>
+  <div id="jsonOutput"></div>
+  <button type="button" 
+  onclick="getData()">
+    Find friend
+  </button>
+  <button id="Next">Next</button>
+  <div id="Output"></div>
+  <div id="demo"></div>
+  <form id="dataForm">
+    <label for="name">Name:</label>
+    <input type="text" id="name" name="name"><br><br>
+    <label for="latitude">Latitude:</label>
+    <input type="text" id="latitude" name="latitude"><br><br>
+    <label for="longitude">Longitude:</label>
+    <input type="text" id="longitude" name="longitude"><br><br>
+    <button type="submit">Save Data</button>
+  </form>
+  <footer>
+    <p>Made in 2025 by Alison Marsh</p><br>
+    <a href="https://www.linkedin.com/in/alison-marsh-163b082a0/">My Linkedin</a>
+  </footer>
 </body>
-<footer>
-  <p>Copyright 2025- Alison Marsh</p><br>
-  <a href="https://www.linkedin.com/in/alison-marsh-163b082a0/">Linkedin</a>
-</footer>
+
 </html>
