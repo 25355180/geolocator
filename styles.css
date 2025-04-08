@@ -24,6 +24,7 @@ h2 {
   align-items: center;
   color: antiquewhite;
   background-color: rgb(8, 47, 17);
+  justify-content: space-between;
 }
 body{
   background-color: rgb(175, 244, 175);
