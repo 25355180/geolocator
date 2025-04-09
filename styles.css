@@ -59,13 +59,26 @@ button{
   padding: 10px; 
   font-size: medium;
 }/* button styles*/
-img{
+#runner{
   display: flex;
   margin-top: 20px;
   position: relative;
   height: auto;
   width: 20%;
 }/* image styles*/
+#iconimg{
+  display: flex;
+  margin-top: 20px;
+  position: relative;
+  height: auto;
+  width: 20%;
+  float: right;
+}/* image styles*/
+img{
+  width: 100%;
+  height: auto;
+  /* ensures images are responsive*/
+}
 footer{
   border-bottom: 4px solid antiquewhite;
   align-items: center;
