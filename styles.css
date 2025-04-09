@@ -73,6 +73,8 @@ button{
   height: auto;
   width: 20%;
   float: right;
+  margin-left: 10px;
+  margin-right: 10px;
 }/* image styles*/
 img{
   width: 100%;
