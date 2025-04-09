@@ -1,28 +1,30 @@
 <!DOCTYPE html>
+<html lang="en"><!-- sets the language -->
 <html>
   <head>
-    <title>Find 'em</title>
+    <title>Find 'em</title><!-- sets the site title -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <script src="script.js"></script>
-    <link rel="stylesheet" href="styles.css">
+    <script src="script.js"></script><!-- sets the javascript file -->
+    <link rel="stylesheet" href="styles.css"><!-- sets the style sheet -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Poetsen+One&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><!-- sets the font -->
+    <link href="https://fonts.googleapis.com/css2?family=Poetsen+One&display=swap" rel="stylesheet"><!-- sets the font -->
+    <link rel="icon" type="image/x-icon" href="/images/favicon.ico"><!-- sets the tab image -->
   </head>
 <body>
-  <div class="header">
-    <div id="logo">
-      <img src="run1.png" alt="person running">
-      <h1>Find 'em</h1>
+  <div class="header"><!-- setting header class for styling -->
+    <div id="logo"><!-- setting logo id for styling -->
+      <img src="run1.png" alt="person running"><!-- logo image -->
+      <h1>Find 'em</h1><!-- logo -->
   </div>
-    <h2>Lets see where you are!</h2>
+    <h2>Lets see where you are!</h2><!-- slogan -->
   </div>
 
 
   <p>Welcome to Find 'em! The website where you can find your friends!
   Send your location to the server where your friends can find you or see their last uploaded location!
-  Never lose your friends again with Find 'em!</p>
-  <div id="googleMap" style="width:100%;height:400px;"></div>
+  Never lose your friends again with Find 'em!</p><!-- content -->
+  <div id="googleMap" style="width:100%;height:400px;"></div><!-- setting map id and adding styling -->
   <script>
     function myMap(latitude, longitude) {
       var mapProp= {
@@ -55,25 +57,28 @@
     marker.setMap(map);
   }
   </script>
-
+<!-- script that pulls in google map from google maps api -->
 
   <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAjyR_4HIqK_eDcFn_QPviniCgMPdpET4A&callback=myMap"></script>
+  <!-- api key -->
 
   <p>Click the button to get your coordinates.</p>
-  <button id="geo" onclick="getLocation()">Your location</button>
+  <button id="geo" onclick="getLocation()">Your location</button><!-- clicking button executes the get location function -->
   <p id="demo"></p>
-
+<!-- function output goes here -->
   <p>Here you can check your friends locations. First check who's online then hit next to see where everyone is.</p>
   <p>If your friend doesn't appear they have hidden their location.</p>
   <div id="jsonOutput"></div>
+  <!-- function output goes here -->
   <button type="button" 
   onclick="getData()">
+  <!-- clicking button executes the get data function -->
     Find friend
   </button>
   <button id="Next">Next</button>
   <div id="Output"></div>
   <div id="demo"></div>
-  <form id="dataForm">
+  <form id="dataForm"><!-- form for user input -->
     <label for="name">Name:</label>
     <input type="text" id="name" name="name"><br><br>
     <label for="latitude">Latitude:</label>
@@ -82,9 +87,9 @@
     <input type="text" id="longitude" name="longitude"><br><br>
     <button type="submit">Save Data</button>
   </form>
-  <footer>
+  <footer><!-- footer -->
     <p>Made in 2025 by Alison Marsh</p><br>
-    <a href="https://www.linkedin.com/in/alison-marsh-163b082a0/">My Linkedin</a>
+    <a href="https://www.linkedin.com/in/alison-marsh-163b082a0/">My Linkedin</a><!-- my linkedin-->
   </footer>
 </body>
 

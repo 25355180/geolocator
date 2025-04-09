@@ -11,7 +11,7 @@ function convertToJson() {
   let jsonOutput = document.getElementById("jsonOutput");
   jsonOutput.innerHTML = "<pre>" + jsonData +"</pre>";
 };
-
+// function gets data from the yourlocation element then turns it to json
 function getData() {
   const xmlhttp = new XMLHttpRequest();
   xmlhttp.onload = function () {
@@ -22,7 +22,7 @@ function getData() {
     locations.forEach(location => {
       output += location.name; 
       showPositions(location); 
-    });
+    });//grabs data from the json file
   // tutorial from: https://www.w3schools.com/js/js_api_geolocation.asp
     document.getElementById("Output").innerHTML = output; 
     let index = 0; 
@@ -40,7 +40,7 @@ function getData() {
   xmlhttp.open("GET", "json_locations.txt", true);
   xmlhttp.send();
 }
-
+//reads locations in json file and displays output when you press next
 
 
 function showPositions(myObj) {
@@ -62,7 +62,7 @@ function showPositions(myObj) {
     });
     marker.setMap(map);
   }
-}
+}//positions markers on map based off of json file locations
 
 
 document.getElementById('dataForm').addEventListener('submit', function(event) {
@@ -84,4 +84,4 @@ document.getElementById('dataForm').addEventListener('submit', function(event) {
   const storedData = JSON.parse(localStorage.getItem('formData'));
   document.getElementById("demo").innerHTML = `Name: ${storedData.name}, Latitude: ${storedData.latitude}, Longitude: ${storedData.longitude}`;
 });
- 
+ //stores data

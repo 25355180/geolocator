@@ -1,10 +1,12 @@
 #googleMap {
     height: 400px;
     width: 100%;   
-  }
+}
+/* google maps styles */
 p {
 font-size: 20px;
 }
+/* p styles */
 h1 {
   font-size: 75px;
   font-weight: bold;
@@ -12,6 +14,7 @@ h1 {
   width: 100%;
   height: auto;
 }
+/* h1 styles and position*/
 h2 {
   font-size: 37px;
   padding-left: 50px;
@@ -19,6 +22,7 @@ h2 {
   width: 100%;
   height: auto;
 }
+/* h2 styles and position*/
 #logo{
   display: flex;
   flex-direction: row;
@@ -26,6 +30,7 @@ h2 {
   width: 100%;
   height: auto;
 }
+/* logo styles and position*/
 .header{
   width: 100%;
   height: auto;
@@ -37,11 +42,13 @@ h2 {
   background-color: rgb(8, 47, 17);
   justify-content: space-around;
 }
+/* header styles and position*/
 body{
   background-color: rgb(175, 244, 175);
   font-family: "Poetsen One", sans-serif;
   margin: 0;
 }
+/* body styles*/
 button{
   font-family: "Poetsen One", sans-serif;
   background-color: black;
@@ -51,7 +58,7 @@ button{
   width: auto;
   padding: 10px; 
   font-size: medium;
-}
+}/* button styles*/
 img{
   display: flex;
   margin-left: 50px;
@@ -59,13 +66,13 @@ img{
   position: relative;
   height: auto;
   width: 20%;
-}
+}/* image styles*/
 footer{
   border-bottom: 4px solid antiquewhite;
   align-items: center;
   color: antiquewhite;
   background-color: rgb(8, 47, 17);
-}
+}/* footer styles*/
 form{
   padding: 20px;
-}
+}/* form styles*/
