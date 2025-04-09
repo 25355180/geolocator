@@ -61,7 +61,6 @@ button{
 }/* button styles*/
 img{
   display: flex;
-  margin-left: 50px;
   margin-top: 20px;
   position: relative;
   height: auto;
