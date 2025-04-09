@@ -7,7 +7,7 @@ p {
 font-size: 20px;
 }
 /* p styles */
-h1 {
+.mainLogo {
   font-size: 75px;
   font-weight: bold;
   font-style: italic;
@@ -15,7 +15,7 @@ h1 {
   height: auto;
 }
 /* h1 styles and position*/
-h2 {
+.slogan {
   font-size: 37px;
   padding-left: 50px;
   float: right;
