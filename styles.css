@@ -5,6 +5,7 @@
 /* google maps styles */
 p {
 font-size: 20px;
+margin-left: 5px;
 }
 /* p styles */
 .mainLogo {
@@ -14,7 +15,7 @@ font-size: 20px;
   width: 100%;
   height: auto;
 }
-/* h1 styles and position*/
+/* logo styles and position*/
 .slogan {
   font-size: 37px;
   padding-left: 50px;
@@ -22,7 +23,15 @@ font-size: 20px;
   width: 100%;
   height: auto;
 }
-/* h2 styles and position*/
+h1{
+  margin-left: 5px;
+}
+/* h1 styles */
+h2{
+  margin-left: 5px;
+}
+/* h2 styles */
+/* slogan styles and position*/
 #logo{
   display: flex;
   flex-direction: row;
@@ -47,7 +56,6 @@ body{
   background-color: rgb(175, 244, 175);
   font-family: "Poetsen One", sans-serif;
   margin: 0;
-  margin-left: 5px;
 }
 /* body styles*/
 button{
