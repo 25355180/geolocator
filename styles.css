@@ -47,6 +47,7 @@ body{
   background-color: rgb(175, 244, 175);
   font-family: "Poetsen One", sans-serif;
   margin: 0;
+  margin-left: 5px;
 }
 /* body styles*/
 button{
